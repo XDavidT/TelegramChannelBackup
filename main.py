@@ -6,7 +6,6 @@ import os,json
 # local variables
 local_path = os.path.dirname(os.path.abspath(__file__))
 data_path = local_path+'/data'
-# limit_massages = 5
 
 def get_setting():
     with open(local_path+'/setting/config.json') as setting_file:
