@@ -1,4 +1,4 @@
-##Telegram Channel Backup
+#Telegram Channel Backup
 
 ## About
 This is a small program in Python3 that download channel massages and save it in your local machine. It can be used for mirroring or backup when you afraid to lose data or information.
