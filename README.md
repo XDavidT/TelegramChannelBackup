@@ -11,18 +11,28 @@ Use the package manager [pip3](https://pip.pypa.io/en/stable/) to install teleth
 pip3 install telethon
 ```
 
-Before starting, update API id & hash, in *setting/config.json* , get it from [https://my.telegram.org/](https://my.telegram.org/) -> 'API development tools'-> App api_id & App api_hash
+Before starting, update API id & hash, in *setting/config.json* , get it from [https://my.telegram.org/](https://my.telegram.org/) -> 'API development tools'-> App api_id & App api_hash .
+Or You can use your bot API id&hash, you can create a bout using [BotFather](https://t.me/botfather)
+Here is example, how 'config.json' should look like:
+```
+{
+    "api_id":123456,
+    "api_hash":"abcdefghikzjfwqer1234567890"
+}
+```
 
 ## Usage
 
 ```
 python3 main.py -i ChannelID -l LIMIT -o OVERRIDE
 ```
-Using `-i` is short of `--id`, provide an ID of the channel, for example, https://t.me/*test* provide only *test*. By the way.. It's MUST parameter.
+Using `-i` is short of `--id`, provide an ID of the channel, for example, t.me/*test* provide only *test*. By the way.. It's MUST parameter.
 
 Using `-l` is short of `--limit`, set a limit of history, how long you want to search back, if you didn't use it, will take the whole chat (take some time..). INT ONLY
 
 Using `-o` is short of `--override`, is *true* or *false* in lower case sensitive. True(Default) will re-create the folder, False - Will continue and fix what missing.
+
+Using `-m` is short of `--mirror`, to forward the selected messages to other chat (empty bot I created).
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
