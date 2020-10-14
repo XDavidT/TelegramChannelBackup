@@ -11,7 +11,14 @@ Use the package manager [pip3](https://pip.pypa.io/en/stable/) to install teleth
 pip3 install telethon
 ```
 
-Before starting, update API id & hash, in *setting/config.json* , get it from [https://my.telegram.org/](https://my.telegram.org/) -> 'API development tools'-> App api_id & App api_hash
+Before starting, update API id & hash, in *setting/config.json* , get it from [https://my.telegram.org/](https://my.telegram.org/) -> 'API development tools'-> App api_id & App api_hash .
+Here is example, how 'config.json' should look like:
+```
+{
+    "api_id":123456,
+    "api_hash":"abcdefghikzjfwqer1234567890"
+}
+```
 
 ## Usage
 
