@@ -32,6 +32,8 @@ Using `-l` is short of `--limit`, set a limit of history, how long you want to s
 
 Using `-o` is short of `--override`, is *true* or *false* in lower case sensitive. True(Default) will re-create the folder, False - Will continue and fix what missing.
 
+Using `-m` is short of `--mirror`, to forward the selected messages to other chat (empty bot I created).
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
