@@ -1,7 +1,6 @@
 import os,shutil
 
-def get_all_history(client,conv_id,data_path,override=False,mirror=False):
-    conv_path = data_path+'/'+conv_id
+def get_all_history(client,conv_id,conv_path,override=False,mirror=False):
     err_list = []
     exists_ids = []
 
