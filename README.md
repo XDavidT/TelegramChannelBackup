@@ -23,9 +23,6 @@ Here is example, how 'config.json' should look like:
 
 ## Usage
 
-```
-python3 main.py -i ChannelID -l LIMIT -o OVERRIDE
-```
 Using `-i` is short of `--id`, provide an ID of the channel, for example, t.me/*test* provide only *test*. By the way.. It's MUST parameter.
 
 Using `-l` is short of `--limit`, set a limit of history, how long you want to search back, if you didn't use it, will take the whole chat (take some time..). INT ONLY
@@ -35,6 +32,14 @@ Using `-o` is short of `--override`, is *true* or *false* in lower case sensitiv
 Using `-m` is short of `--mirror`, to forward the selected messages to other chat (empty bot I created).
 
 Using `-u` or `--upload`, to upload your data to external website. You can use only sites that have driver. Currently options: *anonymousfiles* - anonymousfiles.io
+
+
+Examples: (ChannelID = Chat ID)
+```
+python3 main.py -i ChannelID -l 5 -o false -u anonymousfiles -m #get only 5 back, do not override, mirror to bot, upload to anonymousfiles
+
+python3 main.py -i ChannelID -o true #Override all the exists data and backup all the chat to local
+```
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
