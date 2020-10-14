@@ -1,17 +1,19 @@
 import os,shutil
 
-def get_all_history(client,conv_id,data_path,override):
+def get_all_history(client,conv_id,data_path,override=False,mirror=False):
     conv_path = data_path+'/'+conv_id
     err_list = []
     exists_ids = []
-    if(override):
-        override_count = 0
-    else:
-        exists_ids = get_exists_id_list(conv_path)
+
 
     #Each covertsation need to manage her own data in folder
     if not(os.path.isdir(conv_path)):
         os.mkdir(conv_path)
+    else:
+        if(override):
+            override_count = 0
+        else:
+            exists_ids = get_exists_id_list(conv_path)
 
     #None limit since we want all the history
     messages = client.get_messages(conv_id,None)
@@ -52,7 +54,6 @@ def get_all_history(client,conv_id,data_path,override):
                         message.id,
                         message.date
                     ))
-
         # Save media attached
         if(message.media) is not None:
             try:
@@ -63,7 +64,14 @@ def get_all_history(client,conv_id,data_path,override):
                 message.id,
                 message.d
                 ))
-
+            
+        
+        if(mirror):
+            try:
+                message.forward_to('BackupMyDataBot')
+            except:
+                continue
+        
         clear_empty(message_path)
 
     #User summary

@@ -15,12 +15,19 @@ parser.add_argument(
     "Default is True, use lower case", 
     choices=['true','false']
     )
+parser.add_argument(
+    "-m","--mirror", 
+    help="Mirror to backup bot", 
+    action='store_true'
+    )
+
 args = parser.parse_args()
 
 def get_args():
     conv_id = ''
     limit = None
     override = True
+    mirror = False
 
     if not(args.id):
         print("You must provide chaneel/user id !")
@@ -42,4 +49,7 @@ def get_args():
         override = False
         print("Override: False")
 
-    return conv_id,limit,override
+    if (args.mirror):
+        mirror=True
+    
+    return conv_id,limit,override,mirror

@@ -22,11 +22,11 @@ def get_setting():
 
 if __name__ == "__main__":
     api_id, api_hash = get_setting()
-    conversation_id, limit, override = get_args()
+    conversation_id, limit, override, mirror = get_args()
     client = TelegramClient('new', api_id, api_hash)
     client.start()
 
     if not(os.path.isdir(data_path)):
         os.mkdir(data_path)
 
-    get_all_history(client,conversation_id,data_path,override)
+    get_all_history(client,conversation_id,data_path,override,mirror)
