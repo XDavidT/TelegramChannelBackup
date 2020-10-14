@@ -26,7 +26,7 @@ Here is example, how 'config.json' should look like:
 ```
 python3 main.py -i ChannelID -l LIMIT -o OVERRIDE
 ```
-Using `-i` is short of `--id`, provide an ID of the channel, for example, https://t.me/*test* provide only *test*. By the way.. It's MUST parameter.
+Using `-i` is short of `--id`, provide an ID of the channel, for example, t.me/*test* provide only *test*. By the way.. It's MUST parameter.
 
 Using `-l` is short of `--limit`, set a limit of history, how long you want to search back, if you didn't use it, will take the whole chat (take some time..). INT ONLY
 
