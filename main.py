@@ -1,6 +1,7 @@
 from telethon import TelegramClient, events, sync
 from conversation_backup import get_all_history
 from cli_parse import get_args
+from upload_manager import uploader
 import os,json
 
 # local variables
@@ -22,11 +23,14 @@ def get_setting():
 
 if __name__ == "__main__":
     api_id, api_hash = get_setting()
-    conversation_id, limit, override, mirror = get_args()
+    conversation_id, limit, override, mirror, upload = get_args()
+    conv_path = data_path +'/'+ conversation_id
     client = TelegramClient('new', api_id, api_hash)
     client.start()
 
     if not(os.path.isdir(data_path)):
         os.mkdir(data_path)
 
-    get_all_history(client,conversation_id,data_path,override,mirror)
+    get_all_history(client,conversation_id,conv_path,override,mirror)
+    uploader(upload,conv_path)
+    
