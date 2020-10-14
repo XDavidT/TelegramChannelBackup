@@ -34,6 +34,8 @@ Using `-o` is short of `--override`, is *true* or *false* in lower case sensitiv
 
 Using `-m` is short of `--mirror`, to forward the selected messages to other chat (empty bot I created).
 
+Using `-u` or `--upload`, to upload your data to external website. You can use only sites that have driver. Currently options: *anonymousfiles* - anonymousfiles.io
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
