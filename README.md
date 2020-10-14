@@ -12,7 +12,6 @@ pip3 install telethon
 ```
 
 Before starting, update API id & hash, in *setting/config.json* , get it from [https://my.telegram.org/](https://my.telegram.org/) -> 'API development tools'-> App api_id & App api_hash .
-
 Or You can use your bot API id&hash, you can create a bout using [BotFather](https://t.me/botfather)
 Here is example, how 'config.json' should look like:
 ```
