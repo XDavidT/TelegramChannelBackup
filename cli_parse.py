@@ -20,6 +20,11 @@ parser.add_argument(
     help="Mirror to backup bot", 
     action='store_true'
     )
+parser.add_argument(
+    "-u","--upload", 
+    help="Upload it to one of supported sites, select one. It can take a while...", 
+    choices=['anonymousfiles']
+    )
 
 args = parser.parse_args()
 
@@ -28,6 +33,7 @@ def get_args():
     limit = None
     override = True
     mirror = False
+    upload = None
 
     if not(args.id):
         print("You must provide chaneel/user id !")
@@ -52,4 +58,7 @@ def get_args():
     if (args.mirror):
         mirror=True
     
-    return conv_id,limit,override,mirror
+    if(args.upload):
+        upload = args.upload
+
+    return conv_id,limit,override,mirror,upload
